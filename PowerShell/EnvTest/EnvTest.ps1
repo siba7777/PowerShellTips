@@ -3,7 +3,7 @@ $APP_DIR =  `
     [System.IO.Path]::GetDirectoryName($myInvocation.MyCommand.Definition)　+ "\";
 
 # 環境変数定義ファイル読込
-. ($APP_DIR + "Env.ps1");
+. (Join-Path $APP_DIR "Env.ps1");
 
 <# デバッグ出力 #>
 $DebugPreference = "Continue";
